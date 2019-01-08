@@ -11,8 +11,9 @@
 <div class="row">
     <div class="col-xs-12">
         <app-recipe-item 
-            *ngFor="let singlerecipe of recipes"
-            [recipe] = "singlerecipe">
+            *ngFor="let singlerecipe of recipes; let i = index"
+            [recipe] = "singlerecipe"
+            [index] = "i">
         </app-recipe-item>
     </div>
 </div>
