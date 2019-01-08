@@ -14,13 +14,17 @@ export class RecipeService {
             [new Ingredient('Yolk', 100000000), new Ingredient('Lettuce', 999)]),
       ];
 
-      constructor(private shoppingListService: ShoppingListService){}
+    constructor(private shoppingListService: ShoppingListService){}
 
-      getRecipes() {
-        return this.recipes.slice();
-      }
+    getRecipes() {
+    return this.recipes.slice();
+    }
 
-      addIngredientsToShoppingList(ingredients: Ingredient[]) {
-        this.shoppingListService.addIngredients(ingredients);
-      }
+    getRecipe(index: number) {
+    return this.recipes[index];
+    }
+
+    addIngredientsToShoppingList(ingredients: Ingredient[]) {
+    this.shoppingListService.addIngredients(ingredients);
+    }
 }
